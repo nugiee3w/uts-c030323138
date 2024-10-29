@@ -9,12 +9,11 @@ class CreateExhibitionsTable extends Migration
     public function up()
     {
         Schema::create('exhibitions', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('name', 255);
+            $table->id();
+            $table->string('name');
             $table->text('description')->nullable();
-            $table->date('start_date')->nullable();
-            $table->date('end_date')->nullable();
-            $table->string('location', 255)->nullable();
+            $table->date('start_date');
+            $table->date('end_date');
             $table->timestamps();
         });
     }

@@ -9,9 +9,9 @@ class CreateStorageLocationsTable extends Migration
     public function up()
     {
         Schema::create('storage_locations', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('name', 100);
-            $table->integer('floor')->nullable();
+            $table->id();
+            $table->string('name');
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }

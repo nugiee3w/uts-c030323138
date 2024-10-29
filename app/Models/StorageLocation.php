@@ -9,10 +9,6 @@ class StorageLocation extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'floor'];
-
-    public function collections()
-    {
-        return $this->hasMany(Collection::class);
-    }
+    protected $fillable = ['name', 'description'];
 }
+

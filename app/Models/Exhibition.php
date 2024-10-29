@@ -9,10 +9,11 @@ class Exhibition extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'description', 'start_date', 'end_date', 'location'];
+    protected $fillable = ['name', 'description', 'start_date', 'end_date'];
 
     public function collections()
     {
         return $this->belongsToMany(Collection::class, 'collection_exhibition');
     }
 }
+

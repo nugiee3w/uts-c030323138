@@ -9,10 +9,5 @@ class Collector extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'contact_info', 'country'];
-
-    public function collections()
-    {
-        return $this->hasMany(Collection::class);
-    }
+    protected $fillable = ['name', 'contact_info'];
 }
